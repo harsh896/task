@@ -1,0 +1,19 @@
+1. scp cmd transfering files:
+  -> scp -i "pem file" file_name user@ip_address:location_in_target_server
+  -> scp -i "pem file" -r "directory_name" user@ip_address:location_in_target_server
+
+2. Ugrade the existing volume
+  -> lsblk
+  -> df -h
+  -> sudo growpart /dev/xvda 1
+  -> sudo xfs_growfs /dev/xvda1
+
+3. install mlocate:
+  -> sudo su
+  -> yum -y update
+  -> yum -y install mlocate
+  -> updatedb
+  -> exit
+  -> locate file_name/directory
+  
+
